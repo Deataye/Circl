@@ -12,13 +12,13 @@ const ContactForm: FC = () => {
         {/* Left - Form Section */}
         <div className="md:col-span-2 bg-white shadow-md rounded-lg p-8 border border-gray-200">
           {/* Heading */}
-          <h2 className={`text-3xl md:text-4xl font-bold ${montserrat.className}`}>
+          <h2 className={`text-3xl md:text-[60px] leading-[70px] font-semibold ${montserrat.className}`}>
             Reach out to{" "}
-            <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text">
+            <span className="bg-[#D561F8] text-transparent bg-clip-text">
               Us
             </span>
           </h2>
-          <p className={`text-gray-600 mt-2 ${roboto.className}`}>
+          <p className={`text-gray-600 font-normal text-[24px] mt-2 ${roboto.className}`}>
             Have a question or feedback? We’re here to help. Send us a message, 
             and we’ll respond to you at the earliest.
           </p>
@@ -27,28 +27,28 @@ const ContactForm: FC = () => {
           <form className="mt-6 space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700">First name *</label>
+                <label className={`block text-sm font-semibold ${montserrat.className} text-gray-700`}>First name *</label>
                 <input type="text" placeholder="John" className="mt-1 w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 p-3" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">Last name *</label>
+                <label className={`block text-sm font-semibold ${montserrat.className} text-gray-700`}>Last name *</label>
                 <input type="text" placeholder="Doe" className="mt-1 w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 p-3" />
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700">Email *</label>
+              <label className={`block text-sm font-semibold ${montserrat.className} text-gray-700`}>Email *</label>
               <input type="email" placeholder="Johndoe@email.com" className="mt-1 w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 p-3" />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700">Phone number *</label>
+              <label className={`block text-sm font-semibold ${montserrat.className} text-gray-700`}>Phone number *</label>
               <input type="tel" placeholder="+966 xxxxxxxxxx" className="mt-1 w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 p-3" />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700">Profession</label>
+                <label className={`block text-sm font-semibold ${montserrat.className} text-gray-700`}>Profession</label>
                 <select className="mt-1 w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 p-3">
                   <option>Personal Trainer</option>
                   <option>Yoga Instructor</option>
@@ -56,13 +56,13 @@ const ContactForm: FC = () => {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700">Other profession (if not listed above)</label>
+                <label className={`block text-sm font-semibold ${montserrat.className} text-gray-700`}>Other profession (if not listed above)</label>
                 <input type="text" placeholder="Other profession" className="mt-1 w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 p-3" />
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700">Your message</label>
+              <label className={`block text-sm font-semibold ${montserrat.className} text-gray-700`}>Your message</label>
               <textarea placeholder="Write your message here..." className="mt-1 w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 p-3 h-28"></textarea>
             </div>
 
@@ -77,7 +77,7 @@ const ContactForm: FC = () => {
           <div className="flex items-center space-x-3">
             <Image src="/email-icon.png" alt="Email" width={28} height={28} />
             <div>
-              <p className="text-gray-500 text-sm">Email</p>
+              <p className={`block text-xl font-semibold ${montserrat.className} text-gray-700`}>Email</p>
               <p className={`text-gray-800 font-medium ${roboto.className}`}>hello@circlonline.com</p>
             </div>
           </div>
@@ -85,7 +85,7 @@ const ContactForm: FC = () => {
           <div className="flex items-center space-x-3">
             <Image src="/location-icon.png" alt="Location" width={28} height={28} />
             <div>
-              <p className="text-gray-500 text-sm">Address</p>
+              <p className={`block text-xl font-semibold ${montserrat.className} text-gray-700`}>Address</p>
               <p className={`text-gray-800 font-medium ${roboto.className}`}>
                 7060 Takhassusi St, Riyadh, KSA
               </p>
