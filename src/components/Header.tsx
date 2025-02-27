@@ -50,7 +50,7 @@ const Header = () => {
 
         {/* App Store Button */}
         <Image
-          src="/Download_on_the_App_Store_Badge.png"
+          src="/appstore.png"
           alt="Download on the App Store"
           width={140}
           height={40}
