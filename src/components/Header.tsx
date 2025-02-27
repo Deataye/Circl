@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Roboto } from "next/font/google";
 
 // Import Roboto font
@@ -12,9 +13,11 @@ const Header = () => {
 
   return (
     <header className="w-full py-4 px-6 flex items-center justify-between bg-transparent">
-      {/* Left: Logo */}
+      {/* Left: Logo with Homepage Link */}
       <div className="flex items-center">
-        <Image src="/Logo.png" alt="Circl Logo" width={100} height={30} />
+        <Link href="/">
+          <Image src="/Logo.png" alt="Circl Logo" width={100} height={30} className="cursor-pointer" />
+        </Link>
       </div>
 
       {/* Center: Navigation Links */}
@@ -27,7 +30,7 @@ const Header = () => {
       {/* Right Section: Language Toggle & App Store Button */}
       <div className="flex items-center space-x-4">
         {/* Language Switcher */}
-        <div className="flex items-center bg-white rounded-full px-2 py-1 ">
+        <div className="flex items-center bg-white rounded-full px-2 py-1">
           <button
             className={`flex items-center px-3 py-1 rounded-full text-sm font-medium transition ${
               language === "EN" ? "bg-gray-800 text-white" : "text-gray-800"
@@ -49,12 +52,7 @@ const Header = () => {
         </div>
 
         {/* App Store Button */}
-        <Image
-          src="/appstore.png"
-          alt="Download on the App Store"
-          width={140}
-          height={40}
-        />
+        <Image src="/appstore.png" alt="Download on the App Store" width={140} height={40} />
       </div>
     </header>
   );

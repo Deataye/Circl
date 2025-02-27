@@ -10,7 +10,7 @@ const Customers: FC = () => {
   return (
     <section className="w-full px-8 md:px-28 lg:px-20 py-20 ">
       {/* Heading */}
-      <h2 className={`text-4xl md:text-[64px] leading-[70px] font-semibold text-center ${montserrat.className}`}>
+      <h2 className={`text-4xl md:text-[64px] -mb-40 leading-[70px] font-semibold text-center ${montserrat.className}`}>
         Circl for{" "} <br />
         <span className="bg-gradient-to-r from-orange-500 to-purple-500 text-transparent bg-clip-text">
           Customers
@@ -20,7 +20,7 @@ const Customers: FC = () => {
       {/* Section 1 - Discover Top Wellness Experts */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16">
         {/* Left Content */}
-        <div className="max-w-xl space-y-6 text-center md:text-left px-4">
+        <div className="max-w-xl space-y-6 text-center -mb-40  md:text-left px-4">
           <div className="flex flex-col items-center md:items-start space-y-3">
             <Image src="/search-icon.png" alt="Search Icon" width={42} height={42} />
             <h3 className={`font-semibold text-[28px] md:text-[32px] ${montserrat.className}`}>
@@ -35,7 +35,7 @@ const Customers: FC = () => {
         </div>
 
         {/* Right Image - Adjusted for better positioning */}
-        <div className="relative items-end">
+        <div className="relative -mr-20 items-end">
           <Image src="/mobilehand.png" alt="Mobile App" width={400} height={150} />
         </div>
       </div>

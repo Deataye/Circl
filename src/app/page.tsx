@@ -1,4 +1,3 @@
-import ContactForm from "@/components/ContactForm";
 import Customers from "@/components/Customers";
 import DownloadApp from "@/components/DownloadApp";
 import FeaturesSection from "@/components/FeaturesSection";
@@ -16,7 +15,6 @@ export default function Home() {
      <FeaturesSection/>
      <ServiceProviders/>
      <Customers/>
-     <ContactForm/>
      <DownloadApp/>
      <Footer/>
     </main>
