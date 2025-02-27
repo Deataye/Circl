@@ -21,7 +21,7 @@ const HomeHero = () => {
           </span>
         </h1>
         <p className={`text-gray-600 font-normal text-[28px] ${roboto.className}`}>
-          Whether you're offering services or looking to book them, Circl makes
+          Whether you&apos;re offering services or looking to book them, Circl makes
           it effortless and reliable.
         </p>
 
