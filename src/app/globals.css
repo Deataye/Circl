@@ -2,20 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Global CSS or Tailwind CSS */
+@keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Moves up */
+    }
+    100% {
+      transform: translateY(0); /* Returns to original position */
+    }
   }
-}
+  
+  /* Apply animation to the name tags */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+
