@@ -22,7 +22,7 @@ const ServiceProviders: FC = () => {
         {/* Left Text Content */}
         <div className="max-w-xl space-y-6 text-center md:text-left">
           <div className="flex flex-col items-center md:items-start space-y-2">
-            <Image src="/group.png" alt="Create & Sell" width={40} height={40} />
+            <Image src="/Group.png" alt="Create & Sell" width={40} height={40} />
             <h3 className={`font-semibold text-[28px] md:text-[32px] ${montserrat.className}`}>
               Effortlessly Create & Sell Services
             </h3>

@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="flex flex-col items-center space-y-4">
         {/* Logo */}
         <div className="flex flex-col items-center">
-          <Image src="/logo.png" alt="Circl Logo" width={80} height={30} />
+          <Image src="/Logo.png" alt="Circl Logo" width={80} height={30} />
           <p className={`text-gray-600 text-sm ${montserrat.className}`}>
             Wellness professionals on demand
           </p>
