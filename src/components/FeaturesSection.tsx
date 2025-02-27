@@ -22,7 +22,7 @@ const FeaturesSection: FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
         {/* Card 1 - Swipe & Discover */}
         <div className="bg-white shadow-md rounded-xl p-6 flex flex-col items-start text-left border border-gray-200">
-          <Image src="/group.png" alt="Swipe & Discover" width={40} height={40} />
+          <Image src="/Group.png" alt="Swipe & Discover" width={40} height={40} />
           <h3 className={`font-semibold text-[24px] mt-4 ${montserrat.className}`}>Swipe & Discover</h3>
           <p className={`text-gray-600 font-normal text-[18px] mt-2 ${roboto.className}`}>
             Effortlessly explore top wellness experts and find the right match for your journey.
