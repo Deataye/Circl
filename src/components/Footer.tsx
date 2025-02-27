@@ -33,7 +33,7 @@ const Footer = () => {
 
         {/* Policy Links */}
         <div className={`flex flex-wrap justify-center space-x-4 text-gray-600 text-sm ${roboto.className}`}>
-          <a href="#" className="hover:underline">Privacy policy</a>
+          <a href="/PrivacyPolicy" className="hover:underline">Privacy policy</a>
           <span>|</span>
           <a href="#" className="hover:underline">Freelance terms</a>
           <span>|</span>
