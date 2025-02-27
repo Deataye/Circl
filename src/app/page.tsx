@@ -16,7 +16,7 @@ export default function Home() {
      <FeaturesSection/>
      <ServiceProviders/>
      <Customers/>
-     
+     <ContactForm/>
      <DownloadApp/>
      <Footer/>
     </main>
