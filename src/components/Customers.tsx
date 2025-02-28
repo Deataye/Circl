@@ -1,89 +1,114 @@
+"use client"; // Ensures this is a client-side component
+
 import Image from "next/image";
 import { FC } from "react";
 import { Montserrat, Roboto } from "next/font/google";
+import { useLanguage } from "../context/LanguageContext"; // Import LanguageContext
 
 // Import Google Fonts
 const montserrat = Montserrat({ subsets: ["latin"], weight: ["400", "600"] });
 const roboto = Roboto({ subsets: ["latin"], weight: ["300", "400", "500"] });
 
 const Customers: FC = () => {
+  const { language } = useLanguage(); // Access selected language
+
+  const translations = {
+    EN: {
+      title: "Circl for Customers",
+      sections: [
+        {
+          icon: "/search-icon.png",
+          title: "Discover Top Wellness Experts",
+          description:
+            "Swipe through a curated selection of wellness professionals and find the perfect match for your needs. Explore profiles, and choose with confidence.",
+          image: "/mobilehand.png",
+        },
+        {
+          icon: "/Layer_1.png",
+          title: "Effortless Booking",
+          description:
+            "Seamlessly schedule classes or services with just a few taps. No back-and-forth messages—just instant, hassle-free booking at your convenience.",
+          image: "/select.png",
+        },
+        {
+          icon: "/block-icon.png",
+          title: "Stay Organized",
+          description:
+            "Keep track of your upcoming sessions, manage payments, and access your favorite providers—all in one easy-to-use platform.",
+          image: "/organized.png",
+        },
+      ],
+    },
+    AR: {
+      title: "تطبيق Circl لعملائنا",
+      sections: [
+        {
+          icon: "/search-icon.png",
+          title: "اكتشف أفضل خبراء العناية بالصحة",
+          description:
+            "تصفح قائمة من متخصصي العناية بالصحة واختر الأنسب لاحتياجاتك. استكشف الملفات الشخصية، واتخذ قراراتك بثقة.",
+          image: "/mobilehand.png",
+        },
+        {
+          icon: "/Layer_1.png",
+          title: "حجز بسيط",
+          description:
+            "جدولة مواعيدك وحجوزاتك بكل سهولة. لا حاجة لرسائل متبادلة—فقط احجز فورياً دون عناء.",
+          image: "/select.png",
+        },
+        {
+          icon: "/block-icon.png",
+          title: "حافظ على تنظيمك",
+          description:
+            "تابع جلساتك القادمة، وإدارة المدفوعات، والوصول إلى مقدمي الخدمة المفضلين لديك—كل ذلك في منصة واحدة سهلة الاستخدام.",
+          image: "/organized.png",
+        },
+      ],
+    },
+  };
+
+  // Text alignment based on language
+  const textAlign = language === "EN" ? "text-left" : "text-right";
+  const itemsAlign = language === "EN" ? "items-start" : "items-end";
+
   return (
-    <section className="w-full px-8 md:px-28 lg:px-20 py-20 ">
+    <section id="customers-section" className="w-full px-8 md:px-28 lg:px-20 py-20">
       {/* Heading */}
-      <h2 className={`text-4xl md:text-[64px] -mb-64 leading-[70px] font-semibold text-center ${montserrat.className}`}>
-        Circl for{" "} <br />
+      <h2 className={`text-4xl md:text-[64px] leading-[70px] -mb-60 font-semibold text-center ${montserrat.className}`}>
+        {language === "EN" ? "Circl for " : "تطبيق Circl "}
+        <br />
         <span className="bg-gradient-to-r from-orange-500 to-purple-500 text-transparent bg-clip-text">
-          Customers
+          {language === "EN" ? "Customers" : "لعملائنا"}
         </span>
       </h2>
 
-      {/* Section 1 - Discover Top Wellness Experts */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16">
-        {/* Left Content */}
-        <div className="max-w-xl space-y-6 text-center -mb-52  md:text-left px-4">
-          <div className="flex flex-col items-center md:items-start space-y-3">
-            <Image src="/search-icon.png" alt="Search Icon" width={42} height={42} />
-            <h3 className={`font-semibold text-[28px] md:text-[32px] ${montserrat.className}`}>
-              Discover Top Wellness Experts
-            </h3>
+      {/* Sections */}
+      {translations[language].sections.map((section, index) => (
+        <div
+          key={index}
+          className={`flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16 mt-16 ${
+            index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
+          }`}
+        >
+          {/* Image (position is fixed based on the index) */}
+          <div className={`relative ${index === 0 ? "-mb-16 -mr-20 items-end" : ""}`}>
+            <Image src={section.image} alt={section.title} width={500} height={350} />
           </div>
-          <p className={`text-gray-600 font-normal text-lg md:text-[24px] leading-relaxed ${roboto.className}`}>
-            Swipe through a curated selection of wellness professionals and find 
-            the perfect match for your needs. Explore profiles, and choose with 
-            confidence.
-          </p>
-        </div>
 
-        {/* Right Image - Adjusted for better positioning */}
-        <div className="relative -mb-16 -mr-20 items-end">
-          <Image src="/mobilehand.png" alt="Mobile App" width={600} height={650} />
-        </div>
-      </div>
-
-      {/* Section 2 - Effortless Booking */}
-      <div className="flex flex-col md:flex-row-reverse mb-28 -mt-32 items-center justify-between gap-10 md:gap-16">
-        {/* Left Content */}
-        <div className="max-w-2xl space-y-6 text-center md:text-left px-4">
-          <div className="flex flex-col items-center md:items-start space-y-3">
-            <Image src="/Layer_1.png" alt="Booking Icon" width={42} height={42} />
-            <h3 className={`font-semibold text-[28px] md:text-[32px] ${montserrat.className}`}>
-              Effortless Booking
-            </h3>
+          {/* Text Content (alignment changes based on language) */}
+          <div className={`max-w-xl space-y-6 ${textAlign} px-4`}>
+            <div className={`flex flex-col ${itemsAlign} space-y-3`}>
+              <Image src={section.icon} alt={section.title} width={42} height={42} />
+              <h3 className={`font-semibold text-[28px] md:text-[32px] ${montserrat.className}`}>
+                {section.title}
+              </h3>
+            </div>
+            <p className={`text-gray-600 font-normal text-lg md:text-[24px] leading-relaxed ${roboto.className}`}>
+              {section.description}
+            </p>
           </div>
-          <p className={`text-gray-600 font-normal text-lg md:text-[24px] leading-relaxed ${roboto.className}`}>
-            Seamlessly schedule classes or services with just a few taps. No 
-            back-and-forth messages—just instant, hassle-free booking at your 
-            convenience.
-          </p>
         </div>
-
-        {/* Right Image */}
-        <div className="relative">
-          <Image src="/select.png" alt="Booking System" width={500} height={350} />
-        </div>
-      </div>
-
-      {/* Section 3 - Stay Organized */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16">
-        {/* Left Content */}
-        <div className="max-w-2xl space-y-6 text-center md:text-left px-4">
-          <div className="flex flex-col items-center md:items-start space-y-3">
-            <Image src="/block-icon.png" alt="Organization Icon" width={42} height={42} />
-            <h3 className={`font-semibold text-[28px] md:text-[32px] ${montserrat.className}`}>
-              Stay Organized
-            </h3>
-          </div>
-          <p className={`text-gray-600 font-normal text-lg md:text-[24px] leading-relaxed ${roboto.className}`}>
-            Keep track of your upcoming sessions, manage payments, and access 
-            your favorite providers—all in one easy-to-use platform.
-          </p>
-        </div>
-
-        {/* Right Image */}
-        <div className="relative">
-          <Image src="/organized.png" alt="Stay Organized" width={500} height={350} />
-        </div>
-      </div>
+      ))}
     </section>
   );
 };

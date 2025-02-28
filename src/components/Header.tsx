@@ -1,15 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
 import Link from "next/link";
 import { Roboto } from "next/font/google";
 
-// Import Roboto font
 const roboto = Roboto({ subsets: ["latin"], weight: ["300", "400", "500"] });
 
 const Header = () => {
-  const [language, setLanguage] = useState("EN");
+  const { language, toggleLanguage } = useLanguage(); // ✅ Access global language state
+
+  // Function to handle smooth scrolling
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <header className="w-full py-4 px-6 flex items-center justify-between bg-transparent">
@@ -22,9 +29,15 @@ const Header = () => {
 
       {/* Center: Navigation Links */}
       <nav className={`hidden md:flex space-x-6 text-gray-800 font-medium text-[16px] leading-[24px] ${roboto.className}`}>
-        <a href="#" className="hover:text-gray-600">Features</a>
-        <a href="#" className="hover:text-gray-600">For Service Providers</a>
-        <a href="#" className="hover:text-gray-600">For Customers</a>
+        <button onClick={() => handleScroll("features-section")} className="hover:text-gray-600">
+          {language === "EN" ? "Features" : "مميزات"}
+        </button>
+        <button onClick={() => handleScroll("service-providers-section")} className="hover:text-gray-600">
+          {language === "EN" ? "For Service Providers" : "لمزودي الخدمات"}
+        </button>
+        <button onClick={() => handleScroll("customers-section")} className="hover:text-gray-600">
+          {language === "EN" ? "For Customers" : "للعملاء"}
+        </button>
       </nav>
 
       {/* Right Section: Language Toggle & App Store Button */}
@@ -35,7 +48,7 @@ const Header = () => {
             className={`flex items-center px-3 py-1 rounded-full text-sm font-medium transition ${
               language === "EN" ? "bg-gray-800 text-white" : "text-gray-800"
             }`}
-            onClick={() => setLanguage("EN")}
+            onClick={toggleLanguage} // ✅ Toggle between EN & AR
           >
             <Image src="/eng.png" alt="UK Flag" width={20} height={15} className="mr-1" />
             EN
@@ -44,7 +57,7 @@ const Header = () => {
             className={`flex items-center px-3 py-1 rounded-full text-sm font-medium transition ${
               language === "AR" ? "bg-gray-800 text-white" : "text-gray-800"
             }`}
-            onClick={() => setLanguage("AR")}
+            onClick={toggleLanguage} // ✅ Toggle between EN & AR
           >
             <Image src="/saudia.png" alt="Saudi Flag" width={20} height={15} className="mr-1" />
             عربي
