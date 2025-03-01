@@ -35,10 +35,15 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ message: "✅ Email sent successfully!" }, { status: 200 });
   } catch (error: unknown) {
+    console.error("Email sending error:", error);
+
     if (error instanceof Error) {
-      console.error("Email sending error:", error.message);
-      return NextResponse.json({ message: "❌ Email sending failed!", error: error.message }, { status: 500 });
+      return NextResponse.json(
+        { message: "❌ Email sending failed!", error: error.message },
+        { status: 500 }
+      );
     }
+    
     return NextResponse.json({ message: "❌ An unknown error occurred!" }, { status: 500 });
   }
 }

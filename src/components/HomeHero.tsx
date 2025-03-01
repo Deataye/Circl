@@ -22,6 +22,20 @@ const HomeHero = () => {
       professionals: "Professionals",
       description: "Whether you're offering services or looking to book them, Circl makes it effortless and reliable.",
       contactUs: "Contact us",
+      professionalsData: [
+        {
+          name: "Mohammed Hadi",
+          profession: "Yoga Instructor 🧘‍♂️",
+        },
+        {
+          name: "Ali Bin Ahmad",
+          profession: "Personal Trainer 💪",
+        },
+        {
+          name: "Fatima Zahra",
+          profession: "Physiotherapist 🏥",
+        },
+      ],
     },
     AR: {
       tagline: "دور على اللي يناسبك في العناية بصحتك",
@@ -30,6 +44,20 @@ const HomeHero = () => {
       professionals: "",
       description: "سواء كنت تقدم خدمات أو تبحث عن حجزها، فإن Circl يجعل الأمر سهلاً وموثوقًا.",
       contactUs: "اتصل بنا",
+      professionalsData: [
+        {
+          name: "محمد هادي",
+          profession: "مدرب اليوغا 🧘‍♂️",
+        },
+        {
+          name: "علي بن أحمد",
+          profession: "مدرب شخصي 💪",
+        },
+        {
+          name: "فاطمة الزهراء",
+          profession: "أخصائية علاج طبيعي 🏥",
+        },
+      ],
     },
   };
 
@@ -68,34 +96,30 @@ const HomeHero = () => {
       </div>
 
       {/* Right Section */}
-      <div className="relative mt-12 md:mt-0">
+      <div className="relative bg-[#F4F4F4] mt-12 md:mt-0">
         {/* Professional Image */}
         <Image src="/hero-image.png" alt="Professional" width={400} height={400} className="rounded-xl" />
 
         {/* Floating Name Tags */}
-        <div className="absolute top-6 left-[-40px] bg-white shadow-lg rounded-lg px-4 py-2 flex items-center space-x-2 animate-float">
-          <Image src="/profile1.png" alt="Mohammed Hadi" width={30} height={30} className="rounded-full" />
-          <div>
-            <p className="font-semibold text-sm">محمد هادي</p>
-            <p className="text-xs text-gray-500">مدرب اليوغا 🧘‍♂️</p>
-          </div>
-        </div>
-
-        <div className="absolute top-[50%] left-[-60px] bg-white shadow-lg rounded-lg px-4 py-2 flex items-center space-x-2 animate-float">
-          <Image src="/profile2.png" alt="Ali Bin Ahmad" width={30} height={30} className="rounded-full" />
-          <div>
-            <p className="font-semibold text-sm">علي بن أحمد</p>
-            <p className="text-xs text-gray-500">مدرب شخصي 💪</p>
-          </div>
-        </div>
-
-        <div className="absolute bottom-6 left-[-20px] bg-white shadow-lg rounded-lg px-4 py-2 flex items-center space-x-2 animate-float">
-          <Image src="/profile3.png" alt="Fatima Zahra" width={30} height={30} className="rounded-full" />
-          <div>
-            <p className="font-semibold text-sm">فاطمة الزهراء</p>
-            <p className="text-xs text-gray-500">أخصائية علاج طبيعي 🏥</p>
-          </div>
-        </div>
+        {translations[language].professionalsData.map((person, index) => {
+          const positions = [
+            "top-6 left-[-40px]",
+            "top-[50%] left-[-60px]",
+            "bottom-6 left-[-20px]",
+          ];
+          return (
+            <div
+              key={index}
+              className={`absolute ${positions[index]} bg-white shadow-lg rounded-lg px-4 py-2 flex items-center space-x-2 animate-float`}
+            >
+              <Image src={`/profile${index + 1}.png`} alt={person.name} width={30} height={30} className="rounded-full" />
+              <div>
+                <p className="font-semibold text-sm">{person.name}</p>
+                <p className="text-xs text-gray-500">{person.profession}</p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
