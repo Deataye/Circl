@@ -37,7 +37,7 @@ export default function Home() {
     background: "linear-gradient(180deg, rgba(93, 222, 240, 0.08) 0%, rgba(137, 62, 234, 0.08) 29%, rgba(244, 79, 106, 0.08) 64.5%, rgba(249, 166, 33, 0.08) 100%)",
     
   }}></div> 
-  <div className="absolute w-[873px] h-[939px] rounded-full top-[350px] -z-10 opacity-90 -left-[200px] blur-3xl bg-[#D6B28833] " ></div> 
+  <div className="absolute w-[873px] h-[939px] rounded-full top-[350px] -z-10 opacity-80 -left-[200px] blur-2xl bg-[#D6B28833] " ></div> 
   <div className="absolute w-[668px] h-[668px] rounded-full  -z-10 bottom-10 opacity-40 -right-[200px] blur-2xl bg-[#E6C3F2B2] " ></div>
       <Header />
       <HomeHero />
