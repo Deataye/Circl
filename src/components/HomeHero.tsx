@@ -104,7 +104,7 @@ const HomeHero = () => {
         {translations[language].professionalsData.map((person, index) => {
           const positions = [
             "top-6 left-[-40px]",
-            "top-[50%] left-[-60px]",
+            "top-[50%] left-[50px]",
             "bottom-6 left-[-20px]",
           ];
           return (
