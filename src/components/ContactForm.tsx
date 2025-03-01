@@ -108,8 +108,8 @@ const ContactForm = () => {
       } else {
         setStatus(`❌ ${data.message}`);
       }
-    } catch (_error) {
-      // Using underscore prefix to indicate intentionally unused variable
+    } catch {
+      // Empty catch block without parameter
       setStatus(translations[language].failMessage);
     }
     setLoading(false);
