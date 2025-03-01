@@ -6,7 +6,7 @@ const roboto = Roboto({ subsets: ["latin"], weight: ["300", "400", "500"] });
 
 const Privacy = () => {
   return (
-    <section className="w-full px-6 md:px-16 lg:px-32 py-12 space-y-10">
+    <section className="w-full lg:max-w-[1440px] lg:mx-auto px-6 md:px-16 lg:px-32 py-12 space-y-10">
       <h1 className={`text-[48px] font-semibold ${montserrat.className}`}>Privacy & Policy</h1>
       
       <div className={`space-y-8 text-gray-800 `}>

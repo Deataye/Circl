@@ -9,7 +9,11 @@ import { useLanguage } from "../context/LanguageContext"; // Import LanguageCont
 const montserrat = Montserrat({ subsets: ["latin"], weight: ["400", "600"] });
 const roboto = Roboto({ subsets: ["latin"], weight: ["300", "400", "500"] });
 
-const Customers: FC = () => {
+interface CustomersProps {
+  id?: string;
+}
+
+const Customers: FC<CustomersProps> = ({ id = "customers-section" }) => {
   const { language } = useLanguage(); // Access selected language
 
   const translations = {
@@ -72,7 +76,7 @@ const Customers: FC = () => {
   const itemsAlign = language === "EN" ? "items-start" : "items-end";
 
   return (
-    <section id="customers-section" className="w-full px-8 md:px-28 lg:px-20 py-20">
+    <section id={id} className="w-full px-8 lg:max-w-[1440px] lg:mx-auto md:px-28 lg:px-20 py-20">
       {/* Heading */}
       <h2 className={`text-4xl md:text-[64px] leading-[70px] -mb-60 font-semibold text-center ${montserrat.className}`}>
         {language === "EN" ? "Circl for " : "تطبيق Circl "}

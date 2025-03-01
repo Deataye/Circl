@@ -9,7 +9,11 @@ import { Montserrat, Roboto } from "next/font/google";
 const montserrat = Montserrat({ subsets: ["latin"], weight: ["400", "600"] });
 const roboto = Roboto({ subsets: ["latin"], weight: ["300", "400", "500"] });
 
-const ServiceProviders: FC = () => {
+interface ServiceProvidersProps {
+  id?: string;
+}
+
+const ServiceProviders: FC<ServiceProvidersProps> = ({ id = "service-providers-section" }) => {
   const { language } = useLanguage(); // Access selected language
 
   const translations = {
@@ -68,7 +72,7 @@ const ServiceProviders: FC = () => {
   };
 
   return (
-    <section id="service-providers-section" className="w-full px-6 md:px-20 py-16 space-y-16">
+    <section id={id} className="w-full lg:max-w-[1440px] lg:mx-auto px-6 md:px-20 py-16 space-y-16">
       {/* Heading */}
       <h2 className={`text-4xl md:text-[64px] leading-tight font-semibold text-center ${montserrat.className}`}>
         Circl {language === "EN" ? "for" : "لمزودي"} <br />

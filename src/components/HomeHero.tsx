@@ -63,7 +63,7 @@ const HomeHero = () => {
 
   return (
     <section
-      className={`w-full px-6 md:px-16 lg:px-24 py-16 flex flex-col md:flex-row items-center justify-between bg-transparent ${
+      className={`w-full px-6 lg:max-w-[1440px] lg:mx-auto md:px-16 lg:px-24 py-16 flex flex-col md:flex-row items-center justify-between bg-transparent ${
         language === "AR" ? "rtl" : "ltr"
       }`}
     >

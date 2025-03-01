@@ -116,7 +116,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="w-full px-6 md:px-20 lg:px-40 py-16">
+    <section className="w-full lg:max-w-[1440px] lg:mx-auto px-6 md:px-20 lg:px-40 py-16">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="md:col-span-2 bg-white shadow-md rounded-lg p-8 border border-gray-200">
           <h2 className={`text-3xl md:text-[60px] leading-[70px] font-semibold ${textAlign} ${montserrat.className}`}>
