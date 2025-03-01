@@ -31,7 +31,7 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full py-4 px-6 lg:max-w-[1440px] lg:mx-auto flex items-center justify-between bg-gradient-to-r from-[#FFF1F3] via-[#FAF0FD] to-[#F9F5FF]">
+    <header className="w-full py-4 px-6 lg:max-w-[1440px] lg:mx-auto flex items-center justify-between ">
       {/* Left: Logo with Homepage Link */}
       <div className="flex items-center">
         <Link href="/">

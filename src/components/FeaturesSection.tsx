@@ -38,7 +38,7 @@ const FeaturesSection: FC<FeaturesSectionProps> = ({ id = "features-section" }) 
   };
 
   return (
-    <section id={id} className="w-full px-6 lg:max-w-[1440px] bg-gradient-to-r from-[#FFF1F3] via-[#FAF0FD] to-[#FFFFFF] lg:mx-auto md:px-16 lg:px-24 py-16">
+    <section id={id} className="w-full px-6 lg:max-w-[1440px]  lg:mx-auto md:px-16 lg:px-24 py-16">
       {/* Heading */}
       <h2 className={`text-4xl md:text-[64px] leading-[71px] font-semibold text-center ${montserrat.className}`}>
         {language === "EN" ? "Wellness " : "محترفي "}
