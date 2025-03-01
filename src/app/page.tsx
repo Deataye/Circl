@@ -32,7 +32,7 @@ const ScrollToSection = () => {
 export default function Home() {
   return (
     <main>
-      <div className="w-full max-w-[1440px] mx-auto overflow-hidden relative"> 
+      <div className="w-full  overflow-hidden relative"> 
         <div className="absolute w-[1067px] h-[835px] rounded-full -top-[550px] -z-10 -left-[450px] blur-2xl "style={{
     background: "linear-gradient(180deg, rgba(93, 222, 240, 0.08) 0%, rgba(137, 62, 234, 0.08) 29%, rgba(244, 79, 106, 0.08) 64.5%, rgba(249, 166, 33, 0.08) 100%)",
     
