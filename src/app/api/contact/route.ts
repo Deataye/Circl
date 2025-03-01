@@ -1,49 +1,44 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-// Load environment variables
-const EMAIL = process.env.EMAIL_USER;
-const PASSWORD = process.env.EMAIL_PASS;
-
 export async function POST(req: Request) {
   try {
-    const { firstName, lastName, email, phone, profession, otherProfession, message } = await req.json();
+    const body = await req.json();
+    const { firstName, lastName, email, phone, profession, otherProfession, message } = body;
 
-    // Validate form fields (basic check)
     if (!firstName || !lastName || !email || !phone || !message) {
-      return NextResponse.json({ message: "❌ All fields are required!" }, { status: 400 });
+      return NextResponse.json({ message: "All required fields must be filled!" }, { status: 400 });
     }
 
-    // Nodemailer transporter
+    // Configure Nodemailer transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: EMAIL,
-        pass: PASSWORD,
+        user: process.env.EMAIL_USER, // Your Gmail
+        pass: process.env.EMAIL_PASS, // App Password (Not your regular password)
       },
     });
 
-    // Email content
-    const mailOptions = {
-      from: EMAIL,
-      to: "shahzaiba61@gmail.com", // Your Gmail
+    await transporter.sendMail({
+      from: process.env.EMAIL_USER,
+      to: "shahzaiba61@gmail.com", // Your email
       subject: "New Contact Form Submission",
-      text: `
-        Name: ${firstName} ${lastName}
-        Email: ${email}
-        Phone: ${phone}
-        Profession: ${profession || "Not specified"}
-        Other Profession: ${otherProfession || "N/A"}
-        Message: ${message}
+      html: `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Profession:</strong> ${profession || otherProfession || "Not provided"}</p>
+        <p><strong>Message:</strong> ${message}</p>
       `,
-    };
+    });
 
-    // Send email
-    await transporter.sendMail(mailOptions);
-
-    return NextResponse.json({ message: "✅ Message sent successfully!" }, { status: 200 });
-  } catch (error) {
-    console.error("Error sending email:", error);
-    return NextResponse.json({ message: "❌ Failed to send email." }, { status: 500 });
+    return NextResponse.json({ message: "✅ Email sent successfully!" }, { status: 200 });
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error("Email sending error:", error.message);
+      return NextResponse.json({ message: "❌ Email sending failed!", error: error.message }, { status: 500 });
+    }
+    return NextResponse.json({ message: "❌ An unknown error occurred!" }, { status: 500 });
   }
 }
