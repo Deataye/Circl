@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Customers from "@/components/Customers";
 import DownloadApp from "@/components/DownloadApp";
@@ -10,7 +10,8 @@ import Header from "@/components/Header";
 import HomeHero from "@/components/HomeHero";
 import ServiceProviders from "@/components/ServiceProviders";
 
-export default function Home() {
+// Separate the logic using a Suspense boundary
+const ScrollToSection = () => {
   const searchParams = useSearchParams();
 
   useEffect(() => {
@@ -25,6 +26,10 @@ export default function Home() {
     }
   }, [searchParams]);
 
+  return null; // No UI needed, just logic
+};
+
+export default function Home() {
   return (
     <main>
       <Header />
@@ -34,6 +39,11 @@ export default function Home() {
       <Customers id="customers-section" />
       <DownloadApp />
       <Footer />
+
+      {/* Wrap Scroll Logic in Suspense */}
+      <Suspense fallback={null}>
+        <ScrollToSection />
+      </Suspense>
     </main>
   );
 }
