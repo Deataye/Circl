@@ -91,7 +91,7 @@ const Customers: FC = () => {
           }`}
         >
           {/* Image (position is fixed based on the index) */}
-          <div className={`relative ${index === 0 ? "-mb-16 -mr-20 items-end" : ""}`}>
+          <div className={`relative ${index === 0 ? "-mb-16 -mr-8 lg:-mr-20 items-end" : ""}`}>
             <Image src={section.image} alt={section.title} width={500} height={350} />
           </div>
 
