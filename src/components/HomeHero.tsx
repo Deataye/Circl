@@ -63,7 +63,7 @@ const HomeHero = () => {
 
   return (
     <section
-      className={`w-full px-6 lg:max-w-[1440px] lg:mx-auto md:px-16 lg:px-24 py-16 flex flex-col md:flex-row items-center justify-between  ${
+      className={`w-full px-4 lg:max-w-[1440px] lg:mx-auto md:px-16 lg:px-24 py-16 flex flex-col md:flex-row items-center justify-between  ${
         language === "AR" ? "rtl" : "ltr"
       }`}
     >
@@ -103,9 +103,9 @@ const HomeHero = () => {
         {/* Floating Name Tags */}
         {translations[language].professionalsData.map((person, index) => {
           const positions = [
-            "top-6 left-[-40px]",
+            "top-6 left-[-10px]",
             "top-[50%] left-[50px]",
-            "bottom-6 left-[-20px]",
+            "bottom-6 left-[-10px]",
           ];
           return (
             <div

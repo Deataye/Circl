@@ -76,9 +76,9 @@ const Customers: FC<CustomersProps> = ({ id = "customers-section" }) => {
   const itemsAlign = language === "EN" ? "items-start" : "items-end";
 
   return (
-    <section id={id} className="w-full px-8 lg:max-w-[1440px] lg:mx-auto md:px-28 lg:px-20 py-20">
+    <section id={id} className="w-full px-4 lg:max-w-[1440px] lg:mx-auto md:px-28 lg:px-20 py-20">
       {/* Heading */}
-      <h2 className={`text-4xl md:text-[64px] leading-[70px] -mb-60 font-semibold text-center ${montserrat.className}`}>
+      <h2 className={`text-4xl md:text-[64px] lg:leading-[70px] -mb-60 font-semibold text-center ${montserrat.className}`}>
         {language === "EN" ? "Circl for " : "تطبيق Circl "}
         <br />
         <span className="bg-gradient-to-r from-orange-500 to-purple-500 text-transparent bg-clip-text">
@@ -95,12 +95,12 @@ const Customers: FC<CustomersProps> = ({ id = "customers-section" }) => {
           }`}
         >
           {/* Image (position is fixed based on the index) */}
-          <div className={`relative ${index === 0 ? "-mb-16 -mr-8 lg:-mr-20 items-end" : ""}`}>
+          <div className={`relative ${index === 0 ? "-mb-16 -mr-4 lg:-mr-20 items-end" : ""}`}>
             <Image src={section.image} alt={section.title} width={500} height={350} />
           </div>
 
           {/* Text Content (alignment changes based on language) */}
-          <div className={`max-w-xl space-y-6 ${textAlign} px-4`}>
+          <div className={`max-w-xl space-y-6 ${textAlign} px-0 lg:px-4`}>
             <div className={`flex flex-col ${itemsAlign} space-y-3`}>
               <Image src={section.icon} alt={section.title} width={42} height={42} />
               <h3 className={`font-semibold text-[28px] md:text-[32px] ${montserrat.className}`}>
