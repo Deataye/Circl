@@ -217,7 +217,7 @@ const ContactForm = () => {
                 {translations[language].contactEmail}
               </p>
               <p className={`text-gray-800 font-medium ${roboto.className}`}>
-                shahzaiba61@gmail.com
+              hello@circlonline.com
               </p>
             </div>
           </div>
