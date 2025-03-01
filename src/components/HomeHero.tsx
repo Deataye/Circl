@@ -68,18 +68,18 @@ const HomeHero = () => {
       }`}
     >
       {/* Left Section */}
-      <div className="max-w-2xl space-y-6">
-        <p className={`text-[32px] font-normal text-gray-600 ${montserrat.className}`}>
+      <div className="lg:max-w-2xl max-w-full space-y-6">
+        <p className={`text-[20px]  lg:text-[32px] font-normal text-gray-600 ${montserrat.className}`}>
           {translations[language].tagline}
         </p>
-        <h1 className={`text-4xl md:text-[60px] font-semibold leading-tight ${montserrat.className}`}>
+        <h1 className={`text-[32px] md:text-[60px] font-semibold lg:leading-tight ${montserrat.className}`}>
           {translations[language].heading} <br />
           <span className="text-black">{translations[language].trusted} </span>
           <span className="bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text">
             {translations[language].professionals}
           </span>
         </h1>
-        <p className={`text-gray-600 font-normal text-[28px] ${roboto.className}`}>
+        <p className={`text-gray-600 font-normal text-[16px] lg:text-[28px] ${roboto.className}`}>
           {translations[language].description}
         </p>
 

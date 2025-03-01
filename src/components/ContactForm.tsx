@@ -171,17 +171,73 @@ const ContactForm = () => {
             />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <select 
-                name="profession" 
-                value={formData.profession} 
-                onChange={handleChange} 
-                className={`w-full p-3 border rounded-md ${textAlign}`}
-              >
-                <option value="">{translations[language].selectProfession}</option>
-                <option>{translations[language].professions.personalTrainer}</option>
-                <option>{translations[language].professions.yogaInstructor}</option>
-                <option>{translations[language].professions.massageTherapist}</option>
-              </select>
+            <select
+  name="profession"
+  value={formData.profession}
+  onChange={handleChange}
+  className="w-full p-3 border rounded-md"
+>
+  <option value="" disabled>Select Profession</option>
+
+  {/* Health & Fitness */}
+  <optgroup label="Health and Fitness">
+    <option>Personal Trainer</option>
+    <option>Strength & Conditioning</option>
+    <option>Sports Coach</option>
+    <option>Yoga Instructor</option>
+    <option>Pilates Instructor</option>
+    <option>Nutritionist</option>
+    <option>Dietitian</option>
+    <option>Group Fitness Instructor</option>
+  </optgroup>
+
+  {/* Hair & Beauty */}
+  <optgroup label="Hair and Beauty">
+    <option>Hair Stylist</option>
+    <option>Barber</option>
+    <option>Makeup Artist</option>
+    <option>Nail Technician</option>
+    <option>Beautician</option>
+  </optgroup>
+
+  {/* Mind & Body */}
+  <optgroup label="Mind and Body">
+    <option>Yoga Instructor</option>
+    <option>Pilates Instructor</option>
+    <option>Meditation Teacher</option>
+    <option>Lifestyle Coach</option>
+    <option>Wellness Coach</option>
+    <option>Personal Trainer</option>
+    <option>Nutritionist</option>
+    <option>Dietitian</option>
+  </optgroup>
+
+  {/* Treatments */}
+  <optgroup label="Treatments">
+    <option>Physiotherapist</option>
+    <option>Chiropractor</option>
+    <option>Sport Therapist</option>
+    <option>Massage Therapist</option>
+    <option>Acupuncturist</option>
+    <option>Aromatherapist</option>
+    <option>Life Coach</option>
+  </optgroup>
+
+  {/* General Sports */}
+  <optgroup label="General Sports">
+    <option>Football Coach</option>
+    <option>Soccer Coach</option>
+    <option>Tennis Coach</option>
+    <option>Padel Coach</option>
+    <option>Swimming Coach</option>
+    <option>Martial Arts Teacher</option>
+    <option>Boxing Coach</option>
+    <option>Dance Instructor</option>
+    <option>Judo Instructor</option>
+    <option>Taekwondo Instructor</option>
+  </optgroup>
+</select>
+
               <input 
                 name="otherProfession" 
                 type="text" 
