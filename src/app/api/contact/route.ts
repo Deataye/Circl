@@ -7,33 +7,47 @@ export async function POST(req: Request) {
     const { firstName, lastName, email, phone, profession, otherProfession, message } = body;
 
     if (!firstName || !lastName || !email || !phone || !message) {
-      return NextResponse.json({ message: "All required fields must be filled!" }, { status: 400 });
+      return NextResponse.json(
+        { message: "All required fields must be filled!" },
+        { status: 400 }
+      );
     }
 
-    // Configure Nodemailer transporter
+    // Updated Nodemailer configuration
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
       auth: {
-        user: process.env.EMAIL_USER, // Your Gmail
-        pass: process.env.EMAIL_PASS, // App Password (Not your regular password)
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: "shahzaiba61@gmail.com", // Your email
+      to: "shahzaiba61@gmail.com",
       subject: "New Contact Form Submission",
       html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Profession:</strong> ${profession || otherProfession || "Not provided"}</p>
-        <p><strong>Message:</strong> ${message}</p>
+        <p>New Contact Form Submission</p>
+        <p>Name: ${firstName} ${lastName}</p>
+        <p>Email: ${email}</p>
+        <p>Phone: ${phone}</p>
+        <p>Profession: ${profession || otherProfession || "Not provided"}</p>
+        <p>Message: ${message}</p>
       `,
     });
 
-    return NextResponse.json({ message: "✅ Email sent successfully!" }, { status: 200 });
+    return NextResponse.json(
+      { message: "✅ Email sent successfully!" },
+      {
+        status: 200,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'POST'
+        }
+      }
+    );
   } catch (error: unknown) {
     console.error("Email sending error:", error);
 
@@ -43,7 +57,10 @@ export async function POST(req: Request) {
         { status: 500 }
       );
     }
-    
-    return NextResponse.json({ message: "❌ An unknown error occurred!" }, { status: 500 });
+
+    return NextResponse.json(
+      { message: "❌ An unknown error occurred!" },
+      { status: 500 }
+    );
   }
 }
