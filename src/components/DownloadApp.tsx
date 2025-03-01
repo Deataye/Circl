@@ -28,7 +28,7 @@ const DownloadApp: FC = () => {
   };
 
   return (
-    <section className="w-11/12  lg:max-w-[1440px] lg:mx-auto mx-auto px-6 md:px-16 lg:px-24 py-12 bg-black rounded-[32px] text-white">
+    <section className="w-11/12  lg:max-w-[1440px] lg:mx-auto lg:mb-20 mx-auto px-6 md:px-16 lg:px-24 py-12 bg-black rounded-[32px] text-white">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Left Content */}
         <div className="max-w-xl space-y-4">
