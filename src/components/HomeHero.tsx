@@ -96,7 +96,7 @@ const HomeHero = () => {
       </div>
 
       {/* Right Section */}
-      <div className="relative bg-[#F4F4F4] rounded-3xl mt-12 md:mt-0">
+      <div className="relative bg-[#F4F4F4] rounded-[50px] mt-12 md:mt-0">
         {/* Professional Image */}
         <Image src="/hero-image.png" alt="Professional" width={400} height={400} className="rounded-xl" />
 
