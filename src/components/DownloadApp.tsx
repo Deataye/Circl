@@ -28,21 +28,21 @@ const DownloadApp: FC = () => {
   };
 
   return (
-    <section className="w-11/12  lg:max-w-[1440px] lg:mx-auto mb-10 lg:mb-20 mx-auto px-6 md:px-16 lg:px-24 py-12 bg-black rounded-[32px] text-white">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+    <section className="w-11/12  lg:max-w-[1440px] lg:mx-auto mb-10 lg:mb-20 mx-auto px-6 md:px-16 lg:px-1 py-12 bg-black rounded-[32px] text-white">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-2">
         {/* Left Content */}
-        <div className="max-w-xl space-y-4">
+        <div className="max-w-2xl pl-10 space-y-10">
           <h2 className={`text-3xl md:text-[48px] lg:leading-[48px] font-bold ${montserrat.className}`}>
             {translations[language].heading}
           </h2>
-          <p className={`text-gray-300 text-lg md:text-xl leading-relaxed ${roboto.className}`}>
+          <p className={`text-gray-300 text-lg md:text-[18px] leading-relaxed ${roboto.className}`}>
             {translations[language].description}
           </p>
 
           {/* Download Button */}
           <a
             href="#"
-            className={`inline-flex items-center bg-white text-black px-6 py-3 rounded-sm font-semibold hover:bg-gray-300 transition ${roboto.className}`}
+            className={`inline-flex items-center bg-white text-black px-6 py-3 text-[18px] rounded-sm font-medium hover:bg-gray-300 transition ${roboto.className}`}
           >
             <Image
               src="/apple-icon.png"

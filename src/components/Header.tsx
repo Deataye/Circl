@@ -35,7 +35,7 @@ const Header = () => {
       {/* Left: Logo with Homepage Link */}
       <div className="flex items-center">
         <Link href="/">
-          <Image src="/Logo.png" alt="Circl Logo" width={100} height={30} className="cursor-pointer" />
+          <Image src="/Logo1.png" alt="Circl Logo" width={100} height={30} className="cursor-pointer" />
         </Link>
       </div>
 
@@ -62,7 +62,7 @@ const Header = () => {
             }`}
             onClick={toggleLanguage} // ✅ Toggle between EN & AR
           >
-            <Image src="/eng.png" alt="UK Flag" width={20} height={15} className="mr-1" />
+            <Image src="/1.png" alt="UK Flag" width={30} height={20} className="mr-1" />
             EN
           </button>
           <button
@@ -71,13 +71,13 @@ const Header = () => {
             }`}
             onClick={toggleLanguage} // ✅ Toggle between EN & AR
           >
-            <Image src="/saudia.png" alt="Saudi Flag" width={20} height={15} className="mr-1" />
+            <Image src="/2.png" alt="Saudi Flag" width={30} height={20} className="mr-1" />
             عربي
           </button>
         </div>
 
         {/* App Store Button */}
-        <Image src="/appstore.png" alt="Download on the App Store" width={140} height={40} />
+        <Image src="/3.svg" alt="Download on the App Store" width={160} height={50} />
       </div>
 
       {/* Hamburger Menu Icon (Mobile) */}

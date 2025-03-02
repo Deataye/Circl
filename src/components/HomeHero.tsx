@@ -72,10 +72,10 @@ const HomeHero = () => {
         <p className={`text-[20px]  lg:text-[32px] font-normal text-gray-600 ${montserrat.className}`}>
           {translations[language].tagline}
         </p>
-        <h1 className={`text-[32px] md:text-[60px] font-semibold lg:leading-tight ${montserrat.className}`}>
+        <h1 className={`text-[32px] md:text-[60px] font-semibold lg:leading-[70px] ${montserrat.className}`}>
           {translations[language].heading} <br />
           <span className="text-black">{translations[language].trusted} </span>
-          <span className="bg-gradient-to-r from-pink-500 to-purple-500 text-transparent bg-clip-text">
+          <span className="bg-gradient-to-r from-pink-500 to-purple-500 font-bold text-transparent bg-clip-text">
             {translations[language].professionals}
           </span>
         </h1>
@@ -85,7 +85,7 @@ const HomeHero = () => {
 
         {/* Buttons */}
         <div className="flex items-center space-x-4">
-          <Image src="/appstore.png" alt="Download on the App Store" width={160} height={50} className="cursor-pointer" />
+          <Image src="/3.svg" alt="Download on the App Store" width={160} height={40} className="cursor-pointer" />
           <button
             onClick={() => router.push("/ContactUs")}
             className={`px-6 py-2 border border-gray-800 font-medium text-[19.5px] rounded-md text-gray-800 hover:bg-gray-100 transition ${roboto.className}`}

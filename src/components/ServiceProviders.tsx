@@ -50,7 +50,7 @@ const ServiceProviders: FC<ServiceProvidersProps> = ({ id = "service-providers-s
       title: "Circl لمزودي الخدمات",
       sections: [
         {
-          icon: "/Group.png",
+          icon: "/Group.svg",
           title: "أنشئ و بع خدماتك بسهولة",
           description:
             "طور عملك بسهولة. قدم جلسات خاصة، حصص جماعية، أو باقات—عبر الإنترنت أو شخصياً. مع تطبيق Circl، أدِر العملاء وجذب عملاء جدد من خلال ملفك الشخصي. دع العملاء يكتشفون، يحجزون، ويدفعون—كل ذلك في مكان واحد.",
@@ -58,7 +58,7 @@ const ServiceProviders: FC<ServiceProvidersProps> = ({ id = "service-providers-s
           bgClass: "bg-white",
         },
         {
-          icon: "/calender-icon.png",
+          icon: "/calendar.svg",
           title: "رتب حجوزاتك على كيفك",
           description:
             "تحكم في جدول مواعيدك بكل سهولة من خلال نظام سهل لإدارة الحجوزات. قم بقبول، تعديل، أو إعادة جدولة المواعيد بسهولة، مما يضمن تجربة سلسة لك ولعملائك—كل ذلك في مكان واحد.",
@@ -66,7 +66,7 @@ const ServiceProviders: FC<ServiceProvidersProps> = ({ id = "service-providers-s
           bgClass: "bg-gradient-to-r from-[#E8BBD3] via-[#EAAEDA] to-[#E3AFDB]", // ✅ Added Gradient
         },
         {
-          icon: "/secure-icon.png",
+          icon: "/secure.svg",
           title: "نظام دفع آمن",
           description:
             "استلم مدفوعاتك بسهولة من خلال نظام دفع آمن وسلس. استمتع بمعاملات سريعة، ومدفوعات آمنة، وراحة مالية—حتى تتمكن من التركيز على تقديم خدمات استثنائية دون القلق بشأن الدفعات.",
@@ -96,7 +96,7 @@ const ServiceProviders: FC<ServiceProvidersProps> = ({ id = "service-providers-s
           {/* Left Text Content */}
           <div className="max-w-xl space-y-6 text-left md:text-left">
             <div className="flex flex-col items-center md:items-start space-y-2">
-              <Image src={section.icon} alt={section.title} width={40} height={40} />
+              <Image src={section.icon} alt={section.title} width={48} height={48} />
               <h3 className={`font-semibold text-[28px] md:text-[32px] ${montserrat.className}`}>{section.title}</h3>
             </div>
             <p className={`text-[#8A8194] text-lg md:text-[24px] font-normal ${roboto.className}`}>

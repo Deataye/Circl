@@ -102,7 +102,7 @@ const Customers: FC<CustomersProps> = ({ id = "customers-section" }) => {
           {/* Text Content (alignment changes based on language) */}
           <div className={`max-w-xl space-y-6 ${textAlign} px-0 lg:px-4`}>
             <div className={`flex flex-col ${itemsAlign} space-y-3`}>
-              <Image src={section.icon} alt={section.title} width={42} height={42} />
+              <Image src={section.icon} alt={section.title} width={36} height={36} />
               <h3 className={`font-semibold text-[28px] md:text-[32px] ${montserrat.className}`}>
                 {section.title}
               </h3>

@@ -20,19 +20,19 @@ const FeaturesSection: FC<FeaturesSectionProps> = ({ id = "features-section" }) 
     EN: {
       title: "Wellness Professionals on Demand",
       cards: [
-        { icon: "/Group.png", title: "Swipe & Discover", description: "Effortlessly explore top wellness experts and find the right match for your journey. Swipe through profiles, check credentials, and choose with confidence." },
-        { icon: "/calender-icon.png", title: "Book Instantly", description: "Schedule your favorite wellness services or classes in just a few taps. No waiting, no hassle—just seamless booking at your convenience." },
-        { icon: "/heart-icon.png", title: "Save Your Favorites", description: "Keep your trusted wellness professionals at your fingertips. Save their profiles and rebook sessions whenever you need." },
-        { icon: "/folder-icon.png", title: "Stay Organized", description: "Manage all your bookings, schedules, and payments in one place. Get reminders, track sessions, and stay on top of your wellness routine." },
+        { icon: "/Group.svg", title: "Swipe & Discover", description: "Effortlessly explore top wellness experts and find the right match for your journey. Swipe through profiles, check credentials, and choose with confidence." },
+        { icon: "/calendar.svg", title: "Book Instantly", description: "Schedule your favorite wellness services or classes in just a few taps. No waiting, no hassle—just seamless booking at your convenience." },
+        { icon: "/Heart.svg", title: "Save Your Favorites", description: "Keep your trusted wellness professionals at your fingertips. Save their profiles and rebook sessions whenever you need." },
+        { icon: "/folder.png", title: "Stay Organized", description: "Manage all your bookings, schedules, and payments in one place. Get reminders, track sessions, and stay on top of your wellness routine." },
       ],
     },
     AR: {
       title: "محترفي العناية الصحية عند الطلب",
       cards: [
-        { icon: "/Group.png", title: "انتقد واكتشف", description: "استكشف بسهولة كبار خبراء الصحة واعثر على الشريك المناسب لرحلتك. قم بالتمرير عبر الملفات الشخصية، وتحقق من بيانات الاعتماد، واختر بثقة." },
-        { icon: "/calender-icon.png", title: "احجز على الفور", description: "قم بجدولة خدمات أو دروس العافية المفضلة لديك ببضع نقرات فقط. لا داعي للانتظار، ولا متاعب، فقط قم بالحجز بسلاسة على راحتك." },
-        { icon: "/heart-icon.png", title: "احفظ مفضلاتك", description: "إبقاء المتخصصين في مجال الصحة الموثوق بهم في متناول يدك. احفظ ملفاتهم الشخصية وأعد حجز الجلسات وقتما تشاء." },
-        { icon: "/folder-icon.png", title: "ابق منظماً", description: "إدارة جميع الحجوزات والجداول الزمنية والمدفوعات الخاصة بك في مكان واحد. احصل على تذكيرات وتتبع الجلسات وابق على اطلاع على روتين العافية الخاص بك." },
+        { icon: "/Group.svg", title: "انتقد واكتشف", description: "استكشف بسهولة كبار خبراء الصحة واعثر على الشريك المناسب لرحلتك. قم بالتمرير عبر الملفات الشخصية، وتحقق من بيانات الاعتماد، واختر بثقة." },
+        { icon: "/calendar.svg", title: "احجز على الفور", description: "قم بجدولة خدمات أو دروس العافية المفضلة لديك ببضع نقرات فقط. لا داعي للانتظار، ولا متاعب، فقط قم بالحجز بسلاسة على راحتك." },
+        { icon: "/Heart.svg", title: "احفظ مفضلاتك", description: "إبقاء المتخصصين في مجال الصحة الموثوق بهم في متناول يدك. احفظ ملفاتهم الشخصية وأعد حجز الجلسات وقتما تشاء." },
+        { icon: "/folder.png", title: "ابق منظماً", description: "إدارة جميع الحجوزات والجداول الزمنية والمدفوعات الخاصة بك في مكان واحد. احصل على تذكيرات وتتبع الجلسات وابق على اطلاع على روتين العافية الخاص بك." },
       ],
     },
   };
