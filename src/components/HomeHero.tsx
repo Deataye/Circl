@@ -63,12 +63,12 @@ const HomeHero = () => {
 
   return (
     <section
-      className={`w-full px-4 lg:max-w-[1440px] lg:mx-auto md:px-16 lg:px-24 py-16 flex flex-col md:flex-row items-center justify-between  ${
+      className={`w-full px-4 lg:max-w-[1440px] lg:mx-auto md:px-16 lg:px-20 py-16 flex flex-col md:flex-row items-center justify-between  ${
         language === "AR" ? "rtl" : "ltr"
       }`}
     >
       {/* Left Section */}
-      <div className="lg:max-w-2xl max-w-full space-y-6">
+      <div className="lg:max-w-2xl pt-1 lg:pt-10 max-w-full space-y-6">
         <p className={`text-[20px]  lg:text-[32px] font-normal text-gray-600 ${montserrat.className}`}>
           {translations[language].tagline}
         </p>
@@ -79,7 +79,7 @@ const HomeHero = () => {
             {translations[language].professionals}
           </span>
         </h1>
-        <p className={`text-gray-600 font-normal text-[16px] lg:text-[28px] ${roboto.className}`}>
+        <p className={`text-[#939393] font-normal text-[16px] lg:text-[28px] ${roboto.className}`}>
           {translations[language].description}
         </p>
 
@@ -96,9 +96,9 @@ const HomeHero = () => {
       </div>
 
       {/* Right Section */}
-      <div className="relative bg-[#F4F4F4] rounded-[900px] mt-12 md:mt-0">
+      <div className="relative  mt-12 md:mt-0">
         {/* Professional Image */}
-        <Image src="/hero-image.png" alt="Professional" width={400} height={400} className="rounded-xl" />
+        <Image src="/Mask group.png" alt="Professional" width={564} height={740} className="bg-[#F4F4F4] rounded-full" />
 
         {/* Floating Name Tags */}
         {translations[language].professionalsData.map((person, index) => {

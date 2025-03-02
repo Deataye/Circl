@@ -82,7 +82,7 @@ const ServiceProviders: FC<ServiceProvidersProps> = ({ id = "service-providers-s
       {/* Heading */}
       <h2 className={`text-4xl md:text-[64px] lg:leading-tight font-semibold text-center ${montserrat.className}`}>
         Circl {language === "EN" ? "for" : "لمزودي"} <br />
-        <span className="bg-gradient-to-r from-orange-500 to-purple-500 text-transparent bg-clip-text">
+        <span className="bg-gradient-to-r from-orange-500 to-purple-500 font-bold  text-transparent bg-clip-text">
           {language === "EN" ? "Service Providers" : "الخدمات"}
         </span>
       </h2>
@@ -99,14 +99,14 @@ const ServiceProviders: FC<ServiceProvidersProps> = ({ id = "service-providers-s
               <Image src={section.icon} alt={section.title} width={40} height={40} />
               <h3 className={`font-semibold text-[28px] md:text-[32px] ${montserrat.className}`}>{section.title}</h3>
             </div>
-            <p className={`text-gray-600 text-lg md:text-[24px] font-normal ${roboto.className}`}>
+            <p className={`text-[#8A8194] text-lg md:text-[24px] font-normal ${roboto.className}`}>
               {section.description}
             </p>
           </div>
 
           {/* Right Image with BG Gradient */}
           <div className={`relative p-6 rounded-2xl ${section.bgClass}`}>
-            <Image src={section.image} alt={section.title} width={437} height={437} className="rounded-xl" />
+            <Image src={section.image} alt={section.title} width={544} height={544} className="rounded-xl" />
           </div>
         </div>
       ))}

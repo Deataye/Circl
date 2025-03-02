@@ -55,7 +55,7 @@ const FeaturesSection: FC<FeaturesSectionProps> = ({ id = "features-section" }) 
           <div key={index} className="bg-white shadow-md rounded-xl p-6 flex flex-col items-start text-left border border-gray-200">
             <Image src={card.icon} alt={card.title} width={40} height={40} />
             <h3 className={`font-semibold text-[24px] mt-4 ${montserrat.className}`}>{card.title}</h3>
-            <p className={`text-gray-600 font-normal text-[18px] mt-2 ${roboto.className}`}>{card.description}</p>
+            <p className={`text-[#8A8194] font-normal text-[18px] mt-2 ${roboto.className}`}>{card.description}</p>
           </div>
         ))}
       </div>

@@ -81,7 +81,7 @@ const Customers: FC<CustomersProps> = ({ id = "customers-section" }) => {
       <h2 className={`text-4xl md:text-[64px] lg:leading-[70px] -mb-60 font-semibold text-center ${montserrat.className}`}>
         {language === "EN" ? "Circl for " : "تطبيق Circl "}
         <br />
-        <span className="bg-gradient-to-r from-orange-500 to-purple-500 text-transparent bg-clip-text">
+        <span className="bg-gradient-to-r from-orange-500 to-purple-500 font-bold text-transparent bg-clip-text">
           {language === "EN" ? "Customers" : "لعملائنا"}
         </span>
       </h2>
@@ -96,7 +96,7 @@ const Customers: FC<CustomersProps> = ({ id = "customers-section" }) => {
         >
           {/* Image (position is fixed based on the index) */}
           <div className={`relative ${index === 0 ? "-mb-16 -mr-4 lg:-mr-20 items-end" : ""}`}>
-            <Image src={section.image} alt={section.title} width={500} height={350} />
+            <Image src={section.image} alt={section.title} width={854} height={1080} />
           </div>
 
           {/* Text Content (alignment changes based on language) */}
@@ -107,7 +107,7 @@ const Customers: FC<CustomersProps> = ({ id = "customers-section" }) => {
                 {section.title}
               </h3>
             </div>
-            <p className={`text-gray-600 font-normal text-lg md:text-[24px] leading-relaxed ${roboto.className}`}>
+            <p className={`text-[#8A8194] font-normal text-lg md:text-[24px] leading-relaxed ${roboto.className}`}>
               {section.description}
             </p>
           </div>

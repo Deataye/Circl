@@ -32,7 +32,7 @@ const DownloadApp: FC = () => {
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Left Content */}
         <div className="max-w-xl space-y-4">
-          <h2 className={`text-3xl md:text-4xl font-bold ${montserrat.className}`}>
+          <h2 className={`text-3xl md:text-[48px] lg:leading-[48px] font-bold ${montserrat.className}`}>
             {translations[language].heading}
           </h2>
           <p className={`text-gray-300 text-lg md:text-xl leading-relaxed ${roboto.className}`}>
@@ -60,9 +60,9 @@ const DownloadApp: FC = () => {
           <Image
             src="/banner-mobile.png"
             alt="Mobile App Screens"
-            width={500}
-            height={300}
-            className="rounded-2xl"
+            width={587}
+            height={580}
+            className="rounded-2xl "
           />
         </div>
       </div>
